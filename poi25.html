@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harsh Tripathi — Data Analyst Portfolio</title>
+  <meta name="description" content="Portfolio of Harsh Tripathi — B.Tech Computer Science, aspiring Data Analyst." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#7c3aed;
+      --glass: rgba(255,255,255,0.03);
+      --glass-2: rgba(255,255,255,0.02);
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, #071226 0%, #071829 100%);
+      color:#e6eef8;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.45;
+      padding:32px 16px;
+      display:flex;
+      justify-content:center;
+    }
+    .wrap{width:100%;max-width:var(--max-width);}    
+    header{
+      display:flex;align-items:center;justify-content:space-between;padding:18px 22px;border-radius:14px;background:linear-gradient(180deg,var(--glass),var(--glass-2));backdrop-filter: blur(6px);
+      box-shadow: 0 6px 30px rgba(12,18,30,0.6);
+      margin-bottom:28px;
+    }
+    .brand{display:flex;gap:14px;align-items:center}
+    .logo{
+      width:56px;height:56px;border-radius:12px;display:grid;place-items:center;background:linear-gradient(135deg,var(--accent),#4f46e5);
+      font-weight:700;color:white;font-size:18px;box-shadow:0 6px 18px rgba(124,58,237,0.2)
+    }
+    .brand h1{margin:0;font-size:16px}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-bottom:30px;}
+    .hero-card{background:linear-gradient(180deg,var(--card), #071428);padding:28px;border-radius:14px;box-shadow:0 10px 30px rgba(3,7,18,0.6)}
+    .intro h2{margin:0;font-size:28px}
+    .intro p{color:var(--muted);margin-top:8px}
+    .cta{margin-top:18px}
+    .btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:700}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#5b21b6);color:white}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent;margin-left:8px}
+
+    .profile{display:flex;flex-direction:column;gap:12px;align-items:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:18px;background:linear-gradient(180deg,#0b1220,#071428);display:grid;place-items:center;font-size:36px;font-weight:800;color:var(--accent);box-shadow:0 8px 40px rgba(2,6,23,0.6)}
+    .small{font-size:14px;color:var(--muted)}
+
+    section{margin-bottom:28px}
+    h3{margin:0 0 12px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px}
+
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg,#071428,#061226);border:1px solid rgba(255,255,255,0.03)}
+    .project h4{margin:6px 0 8px}
+    .muted{color:var(--muted);font-size:14px}
+
+    .services{display:flex;gap:12px;flex-wrap:wrap}
+    .service{flex:1 1 220px}
+
+    .certificates-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .certificate{padding:14px;border-radius:10px;background:linear-gradient(180deg,#071428,#061226);border:1px solid rgba(255,255,255,0.03)}
+
+    .contact-card{display:flex;flex-direction:column;gap:10px}
+    .contact-row{display:flex;gap:10px;align-items:center}
+    .link{color:var(--muted);font-weight:600;text-decoration:none}
+
+    footer{margin-top:18px;color:var(--muted);font-size:13px;text-align:center}
+
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .portfolio-grid, .grid, .certificates-grid{grid-template-columns:repeat(2,1fr)}
+      .profile{flex-direction:row;align-items:center;text-align:left}
+    }
+    @media (max-width:640px){
+      nav a{display:none}
+      header{padding:14px}
+      .portfolio-grid,.grid,.certificates-grid{grid-template-columns:1fr}
+      .avatar{width:120px;height:120px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">HT</div>
+        <div>
+          <h1>Harsh Tripathi</h1>
+          <div class="small">B.Tech · Computer Science · Aspiring Data Analyst</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#certificates">Certificates</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero-card hero">
+        <div class="hero-card intro">
+          <h2>Hello — I'm <span style="color:var(--accent)">Harsh Tripathi</span></h2>
+          <p>I am a B.Tech (Computer Science) student focused on Data Analytics. I build data pipelines, clean & visualize data, and deliver insights that drive decisions.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="#portfolio">See My Work</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap">
+            <span class="muted">Email: <a class="link" href="mailto:k.tripathiharsh2005@gmail.com">k.tripathiharsh2005@gmail.com</a></span>
+            <span class="muted">Phone: <a class="link" href="tel:+916390503738">+91 63905 03738</a></span>
+          </div>
+        </div>
+        <aside class="profile">
+          <div class="avatar">HT</div>
+          <div style="min-width:1px">
+            <div style="font-weight:700">Harsh Tripathi</div>
+            <div class="small">Computer Science · Data Analytics</div>
+            <div style="margin-top:12px;display:flex;gap:8px;align-items:center;justify-content:center">
+              <a class="link" href="https://www.linkedin.com/in/harsh-tripathi-2ab741330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a class="link" href="https://github.com/harshtriphati6390" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <h3>About</h3>
+        <div class="card">
+          <p>I'm <strong>Harsh Tripathi</strong>, a B.Tech student in Computer Science with a focus on Data Analytics. I enjoy turning messy data into clear, actionable insights using Python, SQL and visualization tools. I'm seeking roles or internships in Data Analytics where I can apply statistical thinking and build dashboards that answer real questions.</p>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <h3>Services</h3>
+        <div class="services">
+          <div class="card service">
+            <h4>Data Cleaning & ETL</h4>
+            <p class="muted">Prepare and transform raw data into analysis-ready datasets.</p>
+          </div>
+          <div class="card service">
+            <h4>Data Visualization</h4>
+            <p class="muted">Create dashboards and charts that communicate insights clearly.</p>
+          </div>
+          <div class="card service">
+            <h4>Exploratory Analysis</h4>
+            <p class="muted">Statistical exploration to identify trends and opportunities.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <h3>Portfolio</h3>
+        <div class="portfolio-grid">
+          <div class="project"><h4>Sales Dashboard</h4><div class="muted">Power BI dashboard for retail sales.</div></div>
+          <div class="project"><h4>Customer Segmentation</h4><div class="muted">K-means clustering with purchase history.</div></div>
+          <div class="project"><h4>Web Traffic Analysis</h4><div class="muted">Python analysis of web logs.</div></div>
+        </div>
+      </section>
+
+      <!-- CERTIFICATES -->
+      <section id="certificates">
+        <h3>Certificates</h3>
+        <div class="certificates-grid">
+          <div class="certificate">
+            <h4>Oracle Analytics Cloud 2025 Certified Professional</h4>
+            <div class="muted">Issued: Aug 28, 2025</div>
+          </div>
+          <div class="certificate">
+            <h4>IBM Data Analysis with Python</h4>
+            <div class="muted">Issued: Aug 26, 2025 — <a class="link" href="https://courses.cognitiveclass.ai/certificates/1c4a8bb74a2b41ee8b68984566bbacc4" target="_blank">Verify</a></div>
+          </div>
+          <div class="certificate">
+            <h4>IBM Data Science 101</h4>
+            <div class="muted">Issued: Aug 26, 2025 — <a class="link" href="https://courses.cognitiveclass.ai/certificates/fbcea140f9e444c8a793ab70f86df7c2" target="_blank">Verify</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact">
+        <h3>Contact</h3>
+        <div class="card contact-card">
+          <div class="contact-row"><strong>Email:</strong>&nbsp;<a class="link" href="mailto:k.tripathiharsh2005@gmail.com">k.tripathiharsh2005@gmail.com</a></div>
+          <div class="contact-row"><strong>Phone:</strong>&nbsp;<a class="link" href="tel:+916390503738">+91 63905 03738</a></div>
+          <div class="contact-row"><strong>LinkedIn:</strong>&nbsp;<a class="link" href="https://www.linkedin.com/in/harsh-tripathi-2ab741330?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">View profile</a></div>
+          <div class="contact-row"><strong>GitHub:</strong>&nbsp;<a class="link" href="https://github.com/harshtriphati6390" target="_blank">github.com/harshtriphati6390</a></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      © <span id="year"></span> Harsh Tripathi · Built with ❤️ · <a class="link" href="#home">Top</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
